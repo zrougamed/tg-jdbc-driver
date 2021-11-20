@@ -1,10 +1,10 @@
-package com.tigergraph.jdbc.restpp;
+package io.github.zrougamed.jdbc.restpp;
 
-import com.tigergraph.jdbc.restpp.RestppConnection;
-import com.tigergraph.jdbc.restpp.driver.QueryParser;
-import com.tigergraph.jdbc.restpp.driver.RestppResponse;
-import com.tigergraph.jdbc.restpp.driver.QueryType;
-import com.tigergraph.jdbc.Statement;
+import io.github.zrougamed.jdbc.restpp.RestppConnection;
+import io.github.zrougamed.jdbc.restpp.driver.QueryParser;
+import io.github.zrougamed.jdbc.restpp.driver.RestppResponse;
+import io.github.zrougamed.jdbc.restpp.driver.QueryType;
+import io.github.zrougamed.jdbc.Statement;
 
 import java.sql.BatchUpdateException;
 import java.sql.ResultSet;

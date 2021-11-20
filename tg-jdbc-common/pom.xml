@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>tg-java-driver</artifactId>
-    <groupId>com.tigergraph</groupId>
+    <groupId>io.github.zrougamed</groupId>
     <version>1.2</version>
   </parent>
 
-  <groupId>com.tigergraph</groupId>
+  <groupId>io.github.zrougamed</groupId>
   <artifactId>tg-jdbc-common</artifactId>
   <packaging>jar</packaging>
   <name>TigerGraph JDBC Driver Common Module</name>

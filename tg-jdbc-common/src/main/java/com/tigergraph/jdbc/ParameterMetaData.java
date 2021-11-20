@@ -1,4 +1,4 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
 import java.sql.SQLException;
 

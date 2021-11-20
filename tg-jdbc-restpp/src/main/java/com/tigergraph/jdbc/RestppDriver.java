@@ -1,7 +1,7 @@
-package com.tigergraph.jdbc.restpp;
+package io.github.zrougamed.jdbc.restpp;
 
-import com.tigergraph.jdbc.BaseDriver;
-import com.tigergraph.jdbc.restpp.RestppConnection;
+import io.github.zrougamed.jdbc.BaseDriver;
+import io.github.zrougamed.jdbc.restpp.RestppConnection;
 
 import java.net.URL;
 import java.sql.Connection;

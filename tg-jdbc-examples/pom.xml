@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>tg-java-driver</artifactId>
-    <groupId>com.tigergraph</groupId>
+    <groupId>io.github.zrougamed</groupId>
     <version>1.2</version>
   </parent>
 
-  <groupId>com.tigergraph</groupId>
+  <groupId>io.github.zrougamed</groupId>
   <artifactId>tg-jdbc-examples</artifactId>
   <name>TigerGraph JDBC examples</name>
   <version>1.2</version>
@@ -20,7 +20,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.tigergraph</groupId>
+      <groupId>io.github.zrougamed</groupId>
       <artifactId>tg-jdbc-driver</artifactId>
       <version>${project.version}</version>
     </dependency>

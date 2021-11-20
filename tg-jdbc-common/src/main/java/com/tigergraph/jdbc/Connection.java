@@ -1,4 +1,4 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
 import java.sql.*;
 import java.sql.CallableStatement;

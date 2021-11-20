@@ -1,10 +1,10 @@
-package com.tigergraph.jdbc.examples;
+package io.github.zrougamed.jdbc.examples;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-import com.tigergraph.jdbc.*;
-import com.tigergraph.jdbc.restpp.*;
+import io.github.zrougamed.jdbc.*;
+import io.github.zrougamed.jdbc.restpp.*;
 import java.sql.DriverManager;
 import java.util.Properties;
 import java.sql.SQLException;
@@ -20,7 +20,7 @@ public class ConnectionPool
   public static void main( String[] args ) throws SQLException {
     HikariConfig config = new HikariConfig();
 
-    config.setDriverClassName("com.tigergraph.jdbc.Driver");
+    config.setDriverClassName("io.github.zrougamed.jdbc.Driver");
     config.setUsername("tigergraph");
     config.setPassword("tigergraph");
     config.addDataSourceProperty("graph", "gsql_demo");

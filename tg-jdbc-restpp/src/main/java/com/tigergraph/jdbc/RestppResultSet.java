@@ -1,4 +1,4 @@
-package com.tigergraph.jdbc.restpp;
+package io.github.zrougamed.jdbc.restpp;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,11 +7,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import com.tigergraph.jdbc.ResultSet;
-import com.tigergraph.jdbc.Statement;
-import com.tigergraph.jdbc.restpp.driver.QueryType;
-import com.tigergraph.jdbc.Attribute;
-import com.tigergraph.jdbc.TableResults;
+import io.github.zrougamed.jdbc.ResultSet;
+import io.github.zrougamed.jdbc.Statement;
+import io.github.zrougamed.jdbc.restpp.driver.QueryType;
+import io.github.zrougamed.jdbc.Attribute;
+import io.github.zrougamed.jdbc.TableResults;
 
 import java.math.BigDecimal;
 import java.io.InputStream;
@@ -525,8 +525,8 @@ public class RestppResultSet extends ResultSet {
     return Boolean.parseBoolean(obj.toString());
   }
 
-  @Override public com.tigergraph.jdbc.ResultSetMetaData getMetaData() throws SQLException {
-    return new com.tigergraph.jdbc.ResultSetMetaData(this.table_name_, this.attribute_list_);
+  @Override public io.github.zrougamed.jdbc.ResultSetMetaData getMetaData() throws SQLException {
+    return new io.github.zrougamed.jdbc.ResultSetMetaData(this.table_name_, this.attribute_list_);
   }
 
   /**

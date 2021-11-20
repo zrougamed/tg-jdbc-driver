@@ -1,4 +1,4 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
 import java.io.PrintWriter;
 import java.sql.Connection;

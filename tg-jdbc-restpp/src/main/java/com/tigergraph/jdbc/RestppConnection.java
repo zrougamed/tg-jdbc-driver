@@ -1,12 +1,12 @@
-package com.tigergraph.jdbc.restpp;
+package io.github.zrougamed.jdbc.restpp;
 
-import com.tigergraph.jdbc.restpp.driver.QueryParser;
-import com.tigergraph.jdbc.restpp.driver.RestppResponse;
-import com.tigergraph.jdbc.Connection;
-import com.tigergraph.jdbc.ResultSet;
-import com.tigergraph.jdbc.DatabaseMetaData;
-import com.tigergraph.jdbc.PreparedStatement;
-import com.tigergraph.jdbc.*;
+import io.github.zrougamed.jdbc.restpp.driver.QueryParser;
+import io.github.zrougamed.jdbc.restpp.driver.RestppResponse;
+import io.github.zrougamed.jdbc.Connection;
+import io.github.zrougamed.jdbc.ResultSet;
+import io.github.zrougamed.jdbc.DatabaseMetaData;
+import io.github.zrougamed.jdbc.PreparedStatement;
+import io.github.zrougamed.jdbc.*;
 
 import org.apache.http.Header;
 import org.apache.http.auth.AuthScope;

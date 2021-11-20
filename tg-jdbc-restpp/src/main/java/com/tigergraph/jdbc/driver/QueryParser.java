@@ -1,7 +1,7 @@
-package com.tigergraph.jdbc.restpp.driver;
+package io.github.zrougamed.jdbc.restpp.driver;
 
-import com.tigergraph.jdbc.restpp.RestppConnection;
-import com.tigergraph.jdbc.restpp.driver.QueryType;
+import io.github.zrougamed.jdbc.restpp.RestppConnection;
+import io.github.zrougamed.jdbc.restpp.driver.QueryType;
 import org.apache.http.Header;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;

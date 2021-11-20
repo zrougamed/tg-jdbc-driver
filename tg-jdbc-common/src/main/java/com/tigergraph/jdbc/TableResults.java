@@ -1,6 +1,6 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
-import com.tigergraph.jdbc.Attribute;
+import io.github.zrougamed.jdbc.Attribute;
 import java.util.Map;
 import java.util.Iterator;
 import java.util.ArrayList;

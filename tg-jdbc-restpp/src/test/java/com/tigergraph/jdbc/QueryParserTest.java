@@ -1,6 +1,6 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
-import com.tigergraph.jdbc.restpp.driver.QueryParser;
+import io.github.zrougamed.jdbc.restpp.driver.QueryParser;
 
 import static org.junit.Assert.assertTrue;
 import org.apache.http.HttpResponse;

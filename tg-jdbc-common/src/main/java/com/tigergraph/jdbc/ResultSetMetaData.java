@@ -1,6 +1,6 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
-import com.tigergraph.jdbc.Attribute;
+import io.github.zrougamed.jdbc.Attribute;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.ArrayList;

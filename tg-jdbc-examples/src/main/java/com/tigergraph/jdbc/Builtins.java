@@ -1,7 +1,7 @@
-package com.tigergraph.jdbc.examples;
+package io.github.zrougamed.jdbc.examples;
 
-import com.tigergraph.jdbc.*;
-import com.tigergraph.jdbc.restpp.*;
+import io.github.zrougamed.jdbc.*;
+import io.github.zrougamed.jdbc.restpp.*;
 import java.sql.DriverManager;
 import java.util.Properties;
 import java.sql.SQLException;
@@ -49,7 +49,7 @@ public class Builtins {
     sb.append("jdbc:tg:http://").append(ipAddr).append(":").append(port);
 
     try {
-      com.tigergraph.jdbc.Driver driver = new Driver();
+      io.github.zrougamed.jdbc.Driver driver = new Driver();
       try (Connection con = driver.connect(sb.toString(), properties)) {
         try (Statement stmt = con.createStatement()) {
           /**

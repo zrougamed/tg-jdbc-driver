@@ -1,4 +1,4 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
 /**
  * Used to describe attribute of each column in a table.

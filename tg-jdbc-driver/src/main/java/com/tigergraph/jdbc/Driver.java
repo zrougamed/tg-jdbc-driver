@@ -1,6 +1,6 @@
-package com.tigergraph.jdbc;
+package io.github.zrougamed.jdbc;
 
-import com.tigergraph.jdbc.restpp.RestppDriver;
+import io.github.zrougamed.jdbc.restpp.RestppDriver;
 
 import java.util.HashMap;
 import java.util.Map;

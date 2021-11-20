@@ -34,7 +34,7 @@ properties.put("password", "tigergraph");
 properties.put("graph", "gsql_demo");
 
 try {
-  com.tigergraph.jdbc.Driver driver = new Driver();
+  io.github.zrougamed.jdbc.Driver driver = new Driver();
   try (Connection con =
       driver.connect("jdbc:tg:http://127.0.0.1:14240", properties)) {
     try (Statement stmt = con.createStatement()) {
@@ -73,7 +73,7 @@ properties.put("keyStore", "/path/to/identity.jks");
 properties.put("keyStorePassword", "password");
 properties.put("keyStoreType", "JKS");
 try {
-  com.tigergraph.jdbc.Driver driver = new Driver();
+  io.github.zrougamed.jdbc.Driver driver = new Driver();
   try (Connection con =
       driver.connect("jdbc:tg:https://127.0.0.1:14240", properties)) {
     ...
@@ -108,7 +108,7 @@ config.setJdbcUrl(sb.toString());
 HikariDataSource ds = new HikariDataSource(config);
 HikariConfig config = new HikariConfig();
 
-config.setDriverClassName("com.tigergraph.jdbc.Driver");
+config.setDriverClassName("io.github.zrougamed.jdbc.Driver");
 config.setUsername("tigergraph");
 config.setPassword("tigergraph");
 config.addDataSourceProperty("graph", "gsql_demo");
@@ -217,10 +217,10 @@ To run the examples, first clone the repository, then compile and run the exampl
 ```
 mvn clean && mvn install
 cd tg-jdbc-examples
-mvn exec:java -Dexec.mainClass=com.tigergraph.jdbc.examples.Builtins -Dexec.args="127.0.0.1 14240 1"
-mvn exec:java -Dexec.mainClass=com.tigergraph.jdbc.examples.GraphQuery -Dexec.args="127.0.0.1 14240 1"
-mvn exec:java -Dexec.mainClass=com.tigergraph.jdbc.examples.RunQuery -Dexec.args="127.0.0.1 14240 1"
-mvn exec:java -Dexec.mainClass=com.tigergraph.jdbc.examples.UpsertQuery -Dexec.args="127.0.0.1 14240 1"
+mvn exec:java -Dexec.mainClass=io.github.zrougamed.jdbc.examples.Builtins -Dexec.args="127.0.0.1 14240 1"
+mvn exec:java -Dexec.mainClass=io.github.zrougamed.jdbc.examples.GraphQuery -Dexec.args="127.0.0.1 14240 1"
+mvn exec:java -Dexec.mainClass=io.github.zrougamed.jdbc.examples.RunQuery -Dexec.args="127.0.0.1 14240 1"
+mvn exec:java -Dexec.mainClass=io.github.zrougamed.jdbc.examples.UpsertQuery -Dexec.args="127.0.0.1 14240 1"
 ```
 
 ## How to use in Apache Spark
@@ -229,7 +229,7 @@ mvn exec:java -Dexec.mainClass=com.tigergraph.jdbc.examples.UpsertQuery -Dexec.a
 // read vertex
 val jdbcDF1 = spark.read.format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -242,7 +242,7 @@ jdbcDF1.show
 // read edge
 val jdbcDF2 = spark.read.format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -256,7 +256,7 @@ jdbcDF2.show
 // invoke pre-intalled query
 val jdbcDF3 = spark.read.format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -282,7 +282,7 @@ val df = dataList.toDF(colArray: _*)
 // write vertices
 df.write.mode("overwrite").format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -303,7 +303,7 @@ val df2 = dataList2.toDF(colArray2: _*)
 // write edges
 df2.write.mode("overwrite").format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -315,7 +315,7 @@ df2.write.mode("overwrite").format("jdbc").options(
 // invoke loading job
 df2.write.mode("overwrite").format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -336,7 +336,7 @@ val df = sc.textFile("/path/to/your_file", 100).toDF()
 // invoke loading job
 df.write.mode("append").format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -360,7 +360,7 @@ To bypass the disk IO limitation, it is better to put the raw data file on a dif
 ```
 val jdbcDF1 = spark.read.format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -382,7 +382,7 @@ val dbtable1 = """interpreted(a=10, b=20) INTERPRET QUERY (int a, int b) FOR GRA
 
 val jdbcDF2 = spark.read.format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -406,7 +406,7 @@ val dbtable2 = """interpreted(partitionColumn=account) INTERPRET QUERY (string p
 
 val jdbcDF3 = spark.read.format("jdbc").options(
   Map(
-    "driver" -> "com.tigergraph.jdbc.Driver",
+    "driver" -> "io.github.zrougamed.jdbc.Driver",
     "url" -> "jdbc:tg:http://127.0.0.1:14240",
     "username" -> "tigergraph",
     "password" -> "tigergraph",
@@ -495,7 +495,7 @@ spark = SparkSession.builder \
 # read vertex
 jdbcDF = spark.read \
   .format("jdbc") \
-  .option("driver", "com.tigergraph.jdbc.Driver") \
+  .option("driver", "io.github.zrougamed.jdbc.Driver") \
   .option("url", "jdbc:tg:http://127.0.0.1:14240") \
   .option("user", "tigergraph") \
   .option("password", "tigergraph") \
@@ -510,7 +510,7 @@ jdbcDF.show()
 # read edge
 jdbcDF = spark.read \
   .format("jdbc") \
-  .option("driver", "com.tigergraph.jdbc.Driver") \
+  .option("driver", "io.github.zrougamed.jdbc.Driver") \
   .option("url", "jdbc:tg:http://127.0.0.1:14240") \
   .option("user", "tigergraph") \
   .option("password", "tigergraph") \
@@ -526,7 +526,7 @@ jdbcDF.show()
 # invoke pre-intalled query
 jdbcDF = spark.read \
   .format("jdbc") \
-  .option("driver", "com.tigergraph.jdbc.Driver") \
+  .option("driver", "io.github.zrougamed.jdbc.Driver") \
   .option("url", "jdbc:tg:http://127.0.0.1:14240") \
   .option("user", "tigergraph") \
   .option("password", "tigergraph") \
@@ -548,7 +548,7 @@ jdbcDF.show()
 jdbcDF.write \
   .mode("overwrite") \
   .format("jdbc") \
-  .option("driver", "com.tigergraph.jdbc.Driver") \
+  .option("driver", "io.github.zrougamed.jdbc.Driver") \
   .option("url", "jdbc:tg:http://127.0.0.1:14240") \
   .option("user", "tigergraph") \
   .option("password", "tigergraph") \
@@ -569,7 +569,7 @@ jdbcDF.show()
 jdbcDF.write \
   .mode("overwrite") \
   .format("jdbc") \
-  .option("driver", "com.tigergraph.jdbc.Driver") \
+  .option("driver", "io.github.zrougamed.jdbc.Driver") \
   .option("url", "jdbc:tg:http://127.0.0.1:14240") \
   .option("user", "tigergraph") \
   .option("password", "tigergraph") \
@@ -582,7 +582,7 @@ jdbcDF.write \
 jdbcDF.write \
   .mode("overwrite") \
   .format("jdbc") \
-  .option("driver", "com.tigergraph.jdbc.Driver") \
+  .option("driver", "io.github.zrougamed.jdbc.Driver") \
   .option("url", "jdbc:tg:http://127.0.0.1:14240") \
   .option("user", "tigergraph") \
   .option("password", "tigergraph") \

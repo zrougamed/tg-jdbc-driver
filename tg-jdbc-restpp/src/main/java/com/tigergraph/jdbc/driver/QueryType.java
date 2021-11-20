@@ -1,4 +1,4 @@
-package com.tigergraph.jdbc.restpp.driver;
+package io.github.zrougamed.jdbc.restpp.driver;
 
 public enum QueryType {
   QUERY_TYPE_UNKNOWN,

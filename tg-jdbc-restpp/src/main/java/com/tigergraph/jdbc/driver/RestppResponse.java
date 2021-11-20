@@ -1,4 +1,4 @@
-package com.tigergraph.jdbc.restpp.driver;
+package io.github.zrougamed.jdbc.restpp.driver;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
